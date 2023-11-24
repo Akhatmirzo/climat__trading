@@ -47,6 +47,19 @@
     font-weight: $fontWeight;
     line-height: normal;
 }
+
+// ! End of 
+
+// ! paragraph text style
+@mixin pText($color: #303030, $size: 18px, $fontWeight: 600) {
+    color: $color;
+    font-family: 'Open Sans';
+    font-size: $size;
+    font-style: normal;
+    font-weight: $fontWeight;
+    line-height: normal;
+}
+
 // ! End of 
 
 // ! Btn mixins
@@ -56,13 +69,15 @@
     background: #FFA825;
 
     @include headingText(#000, 20px, 700);
+    @content;
 }
-@mixin secondaryRedBtn($width: 293px) {
-    width: $width;
-    padding: 16px 0;
-    background: #FFA825;
 
-    @include headingText(#fff, 20px, 600);
+@mixin secondaryRedBtn($width: 300px) {
+    max-width: $width;
+    background: #CF0028;
+
+    @include headingText(#fff, 24px, 600);
+    @content;
 }
 
 // ! End of 
