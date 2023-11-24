@@ -1,0 +1,68 @@
+// ! Media Queries
+@mixin desktop() {
+    @media screen and (min-width: 1024px) and (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin media($min, $max) {
+    @media screen and (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+// ! End of Media Queries
+
+// ! a tag selector style mixin
+@mixin linkText($color: #222, $size: 16px) {
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+// ! End of a tag selector style mixin
+
+// ! Heading and btn text style
+@mixin headingText($color: #fff, $size: 30px, $fontWeight: 600) {
+    color: $color;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: $fontWeight;
+    line-height: normal;
+}
+// ! End of 
+
+// ! Btn mixins
+@mixin secondaryYellowBtn($width: 293px) {
+    width: $width;
+    padding: 16px 0;
+    background: #FFA825;
+
+    @include headingText(#000, 20px, 700);
+}
+@mixin secondaryRedBtn($width: 293px) {
+    width: $width;
+    padding: 16px 0;
+    background: #FFA825;
+
+    @include headingText(#fff, 20px, 600);
+}
+
+// ! End of 
